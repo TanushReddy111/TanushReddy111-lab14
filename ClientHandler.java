@@ -22,6 +22,11 @@ public class ClientHandler extends Thread{
                     //pw.close();
                 }
             }
+            else{
+                PrintWriter pw = new PrintWriter(socket.getOutputStream(),true);
+                    pw.println("couldn't handshake");
+                    pw.flush();
+            }
             //scanner.close();
             
         } catch (Exception e) {
