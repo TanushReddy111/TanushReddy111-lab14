@@ -182,43 +182,43 @@ public class Lab14_Tester {
     assertEquals("There was an exception on the server", line);
   }
 
-//   @Test
-//   public void test6() {
-//     System.out.println("checking two client communication with server for medium number");
+  @Test
+  public void test6() {
+    System.out.println("checking two client communication with server for medium number");
 
-//     Server server = null;
-//     try{
-//         server = new Server(2021);
-//     }
-//     catch (Exception e) {
-//         System.err.print("Could not open server");
-//         e.printStackTrace();
-//     }
+    Server server = null;
+    try{
+        server = new Server(2021);
+    }
+    catch (Exception e) {
+        System.err.print("Could not open server");
+        e.printStackTrace();
+    }
 
-//     String line = "An exception happened.";
-//     try {
-//         Client client1 = new Client("localhost", 2021);
-//         Client client2 = new Client("localhost", 2021);
+    String line = "An exception happened.";
+    try {
+        Client client1 = new Client("localhost", 2021);
+        Client client2 = new Client("localhost", 2021);
 
-//         client1.handshake();
-//         client2.handshake();
-//         Thread.sleep(1000); // give it a second to actually flush
+        client1.handshake();
+        client2.handshake();
+        Thread.sleep(1000); // give it a second to actually flush
 
-//         server.serve(2);
-//         Thread.sleep(1000); // give it a second to actually flush
+        server.serve(2);
+        Thread.sleep(1000); // give it a second to actually flush
 
-//         line = client1.request("47483647");
-//         Thread.sleep(1000); // give it a second to actually flush
+        line = client1.request("47483647");
+        Thread.sleep(1000); // give it a second to actually flush
 
-//         line += "\t" + client2.request("362880");
-//         Thread.sleep(1000); // give it a second to actually flush
+        line += "\t" + client2.request("362880");
+        Thread.sleep(1000); // give it a second to actually flush
 
-//     } catch (Exception e){
-//         e.printStackTrace();
-//     }
-//     server.disconnect();
-//     assertEquals("The number 47483647 has 4 factors\tThe number 362880 has 160 factors", line);
-//   }
+    } catch (Exception e){
+        e.printStackTrace();
+    }
+    server.disconnect();
+    assertEquals("The number 47483647 has 4 factors\tThe number 362880 has 160 factors", line);
+  }
 
 //   @Test
 //   public void test7() {
