@@ -82,105 +82,105 @@ public class Lab14_Tester {
     assertEquals("The number 17 has 2 factors", line);
   }
 
-//   @Test
-//   public void test3() {
-//     System.out.println("checking client communication with server for medium number");
+  @Test
+  public void test3() {
+    System.out.println("checking client communication with server for medium number");
 
-//     Server server = null;
-//     try{
-//         server = new Server(2021);
-//     }
-//     catch (Exception e) {
-//         System.err.print("Could not open server");
-//         e.printStackTrace();
-//     }
+    Server server = null;
+    try{
+        server = new Server(2021);
+    }
+    catch (Exception e) {
+        System.err.print("Could not open server");
+        e.printStackTrace();
+    }
 
-//     String line = "An exception happened.";
-//     try {
-//         Client client = new Client("localhost", 2021);
+    String line = "An exception happened.";
+    try {
+        Client client = new Client("localhost", 2021);
 
-//         client.handshake();
-//         Thread.sleep(1000); // give it a second to actually flush
+        client.handshake();
+        Thread.sleep(1000); // give it a second to actually flush
 
-//         server.serve(1);
-//         Thread.sleep(1000); // give it a second to actually flush
+        server.serve(1);
+        Thread.sleep(1000); // give it a second to actually flush
 
-//         Integer number = 2*3*4*5*6*7*8*9;
-//         line = client.request(number.toString());
-//         Thread.sleep(1000); // give it a second to actually flush
+        Integer number = 2*3*4*5*6*7*8*9;
+        line = client.request(number.toString());
+        Thread.sleep(1000); // give it a second to actually flush
 
-//     } catch (Exception e){
-//         e.printStackTrace();
-//     }
-//     server.disconnect();
-//     assertEquals("The number 362880 has 160 factors", line);
-//   }
+    } catch (Exception e){
+        e.printStackTrace();
+    }
+    server.disconnect();
+    assertEquals("The number 362880 has 160 factors", line);
+  }
 
-//   @Test
-//   public void test4() {
-//     System.out.println("checking client communication with server for large number");
+  @Test
+  public void test4() {
+    System.out.println("checking client communication with server for large number");
 
-//     Server server = null;
-//     try{
-//         server = new Server(2021);
-//     }
-//     catch (Exception e) {
-//         System.err.print("Could not open server");
-//         e.printStackTrace();
-//     }
+    Server server = null;
+    try{
+        server = new Server(2021);
+    }
+    catch (Exception e) {
+        System.err.print("Could not open server");
+        e.printStackTrace();
+    }
 
-//     String line = "An exception happened.";
-//     try {
-//         Client client = new Client("localhost", 2021);
+    String line = "An exception happened.";
+    try {
+        Client client = new Client("localhost", 2021);
 
-//         client.handshake();
-//         Thread.sleep(1000); // give it a second to actually flush
+        client.handshake();
+        Thread.sleep(1000); // give it a second to actually flush
 
-//         server.serve(1);
-//         Thread.sleep(1000); // give it a second to actually flush
+        server.serve(1);
+        Thread.sleep(1000); // give it a second to actually flush
 
-//         line = client.request("2147483642");
-//         Thread.sleep(1000); // give it a second to actually flush
+        line = client.request("2147483642");
+        Thread.sleep(1000); // give it a second to actually flush
 
-//     } catch (Exception e){
-//         e.printStackTrace();
-//     }
-//     server.disconnect();
-//     assertEquals("The number 2147483642 has 8 factors", line);
-//   }
+    } catch (Exception e){
+        e.printStackTrace();
+    }
+    server.disconnect();
+    assertEquals("The number 2147483642 has 8 factors", line);
+  }
 
-//   @Test
-//   public void test5() {
-//     System.out.println("checking client communication with server for too large number");
+  @Test
+  public void test5() {
+    System.out.println("checking client communication with server for too large number");
 
-//     Server server = null;
-//     try{
-//         server = new Server(2021);
-//     }
-//     catch (Exception e) {
-//         System.err.print("Could not open server");
-//         e.printStackTrace();
-//     }
+    Server server = null;
+    try{
+        server = new Server(2021);
+    }
+    catch (Exception e) {
+        System.err.print("Could not open server");
+        e.printStackTrace();
+    }
 
-//     String line = "An exception happened.";
-//     try {
-//         Client client = new Client("localhost", 2021);
+    String line = "An exception happened.";
+    try {
+        Client client = new Client("localhost", 2021);
 
-//         client.handshake();
-//         Thread.sleep(1000); // give it a second to actually flush
+        client.handshake();
+        Thread.sleep(1000); // give it a second to actually flush
 
-//         server.serve(1);
-//         Thread.sleep(1000); // give it a second to actually flush
+        server.serve(1);
+        Thread.sleep(1000); // give it a second to actually flush
 
-//         line = client.request("92147483642");
-//         Thread.sleep(1000); // give it a second to actually flush
+        line = client.request("92147483642");
+        Thread.sleep(1000); // give it a second to actually flush
 
-//     } catch (Exception e){
-//         e.printStackTrace();
-//     }
-//     server.disconnect();
-//     assertEquals("There was an exception on the server", line);
-//   }
+    } catch (Exception e){
+        e.printStackTrace();
+    }
+    server.disconnect();
+    assertEquals("There was an exception on the server", line);
+  }
 
 //   @Test
 //   public void test6() {

@@ -65,6 +65,7 @@ public class ClientHandler extends Thread{
         int count=0;
         int number = Integer.parseInt(num);
 
+
         for (int i =1; i<number+1; i++ ){
             if(number%i == 0){
                 count++;

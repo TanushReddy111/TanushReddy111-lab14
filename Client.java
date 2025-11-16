@@ -48,9 +48,6 @@ public class Client extends Thread{
         pw.flush();
 
         try {
-
-            
-            
             if(scanner.hasNextLine()){
                 return scanner.nextLine();
             }
@@ -58,7 +55,7 @@ public class Client extends Thread{
         } catch (Exception e) {
             
         }
-        return null;
+        return "There was an exception on the server";
         
     }
 }
